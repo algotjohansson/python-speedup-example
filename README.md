@@ -1,6 +1,6 @@
 # Python Speedup Example
 
-Example of how a python script can be made faster using libraries. In this case Numpy.
+Example of how a python script can be made faster using Numpy.
 
 This example is a simulation of a problem which can be solved by Bayes formula:
 
