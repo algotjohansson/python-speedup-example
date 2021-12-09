@@ -1,5 +1,3 @@
-# Coin biased 0.7 for head OR tail. From factory where 0.6 of coins are biased for tail. Observed sequence: H, H, T, H. What is the probability of bias for head?
-
 from numpy.random import choice
 import time
 
@@ -9,6 +7,7 @@ sims = 100000
 bias_count = {'H': 0, 'T': 0}
 
 for i in range(sims):
+    # Choose what side the coin should be biased for.
     bias = choice(['H', 'T'], 1, p=[.4, .6])[0]
     not_bias = 'H' if bias == 'T' else 'T'
 
