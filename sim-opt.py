@@ -10,7 +10,7 @@ nr_sims = 100000
 # This is done to make the computations easier
 
 # List of biases. 60% of the data 1 40% 0
-biases = choice([0, 1], nr_sims, p=[.4,.6])
+biases = choice([0, 1], nr_sims, p=[.4, .6])
 
 
 # sum a list of 4 np arrays together. It looks like this:
@@ -23,9 +23,9 @@ biases = choice([0, 1], nr_sims, p=[.4,.6])
 #   = [3, 1, 3, 2, ...]
 
 # Here 70% of the arrays are 0
-draws_all_0 = sum([choice([0, 1], nr_sims, p=[.7,.3]) for i in range(4)])
+draws_all_0 = sum([choice([0, 1], nr_sims, p=[.7, .3]) for i in range(4)])
 # Here 70% of the arrays are 1
-draws_all_1 = sum([choice([1, 0], nr_sims, p=[.7,.3]) for i in range(4)])
+draws_all_1 = sum([choice([1, 0], nr_sims, p=[.7, .3]) for i in range(4)])
 
 # Set all draws_all_0/1 to 0 when the bias are not for them. Effectively ignoring them.
 # So, count how many have sum 1, that is, only one T.
